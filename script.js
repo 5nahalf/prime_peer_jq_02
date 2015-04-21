@@ -20,10 +20,11 @@ $(document).ready(function(){
 		});
 	});	
 });
-$(document).mousemove(function(e){
-    $('.btn').css({
-       left: e.pageX, top: e.pageY
+	$(document).mousemove(function(e){
+    	$(".btn").css({
+       	left: e.pageX, top: e.pageY
     });
+
 });
 
 function House(propId, sqFoot, pricePF){
@@ -32,6 +33,9 @@ function House(propId, sqFoot, pricePF){
 	this.pricePF = pricePF;
 
 }
+		$(document).keypress(function(){
+    		$(".btn").empty().prepend("<img src='http://media.giphy.com/media/5ftsmLIqktHQA/giphy.gif'><audio controls autoplay><source src='ned.mp3' type='audio/mpeg'>Your browser does not support the audio element.</audio>");
+    	});
 
 
 
