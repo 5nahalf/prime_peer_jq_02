@@ -1,19 +1,36 @@
+
+
 $(document).ready(function(){
-$(".btn").on("click", function(){
-	House();
-	$("#ourList").prepend("<div class='row' id='row1'><div class='floatCell'><a href=" + propId + ".html>Property ID: " + propId + "</a></div><div class='floatCell'>" + sqFoot + " Sq Ft.</div><div class='floatCell'>$" + pricePF + " / sq foot</div><div class='floatCell'> <button class='removeButton'>Remove</div></div>");
+	$(".btn").on("click", function(){
+		var propId = randomNumber(1000, 9999);
+		var sqFoot = randomNumber(1000, 2000);
+		var pricePF = randomNumber(1, 100);
+
+		var house = new House(propId, sqFoot, pricePF);
+		$("#ourList").prepend("<div class='row' id=" + house.propId + "><div class='floatCell'><a href=" + house.propId + ".html>Property ID: " + house.propId + "</a></div><div class='floatCell'>" + house.sqFoot + " Sq Ft.</div><div class='floatCell'>$" + house.pricePF + " / sq foot</div><div class='floatCell'> <button class='removeButton'>Remove</div></div>");
+	
+		var el = $("#ourList").children().first();
+		el.hide().slideDown();
+
 	});
-		$("#ourList").on("click",".removeButton", function(){
+		
+	$("#ourList").on("click",".removeButton", function(){
 		$(this).parent().parent().slideUp("slow", function(){
 			$(this).remove();
-	});
 		});
+	});	
+});
+$(document).bind('mousemove', function(e){
+    $('.btn').css({
+       left:  e.pageX,
+       top:   e.pageY
+    });
 });
 
 function House(propId, sqFoot, pricePF){
-	this.propId = randomNumber(1000, 9999);
-	this.sqFoot = randomNumber(1000, 2000);
-	this.pricePF = randomNumber(1, 100);
+	this.propId = propId;
+	this.sqFoot = sqFoot;
+	this.pricePF = pricePF;
 
 }
 
@@ -24,5 +41,3 @@ function House(propId, sqFoot, pricePF){
 function randomNumber(min, max) {
 	return Math.floor(Math.random() * (1 + max - min) + min);
 }
-
-

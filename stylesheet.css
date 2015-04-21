@@ -18,7 +18,8 @@ td {
 .btn{
 	margin-left: 50px;
 	background-color: rgba(172,207,204,.1);
-    }
+  position: absolute;
+  }
 
 body {
 	background-color: rgb(255,255,255);
@@ -32,19 +33,16 @@ body {
 
 .floatCell {
   display: inline-block;
-  border-right: 1px solid black; 
   width: 10%; 
   height: 100%;
   padding-left: 10px;
   padding-right: 10px;
 
 }
-.clear {
-  clear: both;   
-}
-#row1 {
-   height: auto;   
-}
+   
+
 .row {
-   border: 1px solid black   
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
+   height: auto;    
 }
