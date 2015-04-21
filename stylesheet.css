@@ -1,0 +1,50 @@
+table, th, td {
+   border: 1px solid rgba(0,55,93,.5);
+
+}
+
+td {
+    padding: 15px;
+}
+
+#webpage {
+	margin-left: 50px;
+	font-size: 30px;
+	font-weight: bold;
+	color: rgb(138,9,23);
+
+}
+
+.btn{
+	margin-left: 50px;
+	background-color: rgba(172,207,204,.1);
+    }
+
+body {
+	background-color: rgb(255,255,255);
+}
+.removeButton {
+	background-color: rgba(172,207,204,.1);
+}
+
+
+
+
+.floatCell {
+  display: inline-block;
+  border-right: 1px solid black; 
+  width: 10%; 
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+.clear {
+  clear: both;   
+}
+#row1 {
+   height: auto;   
+}
+.row {
+   border: 1px solid black   
+}
