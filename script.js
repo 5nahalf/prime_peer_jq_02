@@ -20,10 +20,9 @@ $(document).ready(function(){
 		});
 	});	
 });
-$(document).bind('mousemove', function(e){
+$(document).mousemove(function(e){
     $('.btn').css({
-       left:  e.pageX,
-       top:   e.pageY
+       left: e.pageX, top: e.pageY
     });
 });
 
